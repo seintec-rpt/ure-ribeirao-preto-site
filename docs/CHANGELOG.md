@@ -24,3 +24,8 @@
 - Primeiro deploy em produção realizado pela Vercel, com deploy integrado ao repositório GitHub.
 - URL pública da aplicação: [https://ure-ribeirao-preto-site.vercel.app/](https://ure-ribeirao-preto-site.vercel.app/)
 - URL direta da página de Supervisão: [https://ure-ribeirao-preto-site.vercel.app/setores-da-supervisao-de-ensino](https://ure-ribeirao-preto-site.vercel.app/setores-da-supervisao-de-ensino)
+
+## Correção de atribuição
+
+- Corrigida a interpretação da linha sem supervisor após Jefferson Luiz Zucchermaglio.
+- Criado o setor institucional `Supervisor não atribuído`, sem contabilizá-lo como supervisor real.

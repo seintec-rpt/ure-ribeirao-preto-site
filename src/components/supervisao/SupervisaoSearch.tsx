@@ -24,6 +24,10 @@ function filterSupervisores(supervisores: Supervisor[], query: string) {
   );
 }
 
+function countLabel(count: number, singular: string, plural: string) {
+  return `${count} ${count === 1 ? singular : plural}`;
+}
+
 export default function SupervisaoSearch({ supervisores }: SupervisaoSearchProps) {
   const [query, setQuery] = useState("");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
@@ -32,6 +36,16 @@ export default function SupervisaoSearch({ supervisores }: SupervisaoSearchProps
     () => filterSupervisores(supervisores, activeQuery),
     [activeQuery, supervisores],
   );
+  const totalReais = filteredSupervisores.filter(({ semSupervisor }) => !semSupervisor).length;
+  const totalSemSupervisor = filteredSupervisores.filter(({ semSupervisor }) => semSupervisor).length;
+  const resultSummary = [
+    ...(totalReais > 0 || totalSemSupervisor === 0
+      ? [countLabel(totalReais, "supervisor encontrado", "supervisores encontrados")]
+      : []),
+    ...(totalSemSupervisor > 0
+      ? [countLabel(totalSemSupervisor, "setor sem supervisor encontrado", "setores sem supervisor encontrados")]
+      : []),
+  ].join(" e ");
 
   const handleSearchChange = (value: string) => {
     setQuery(value);
@@ -67,7 +81,7 @@ export default function SupervisaoSearch({ supervisores }: SupervisaoSearchProps
       />
       <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-slate-600" aria-live="polite">
-          {filteredSupervisores.length} {filteredSupervisores.length === 1 ? "supervisor encontrado" : "supervisores encontrados"}
+          {resultSummary}
         </p>
         <div className="flex gap-2">
           <button type="button" onClick={() => setAll(true)} className="rounded-md border border-blue-200 px-3 py-2 text-sm font-medium text-blue-800 hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-blue-700">Expandir todos</button>

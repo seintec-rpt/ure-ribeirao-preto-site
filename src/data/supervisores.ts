@@ -1,5 +1,6 @@
 export type Supervisor = {
   nome: string;
+  semSupervisor?: boolean;
   atribuicoes: string[];
   escolasEstaduais: string[];
   escolasParticularesMunicipais: string[];
@@ -218,8 +219,8 @@ export const supervisores: Supervisor[] = [
   },
   {
     nome: "Jefferson Luiz Zucchermaglio",
-    atribuicoes: ["Alocação PEI", "Formação PEI", "Acúmulo de cargos", "Estágio Probatório (docente, diretor, supervisor)", "Recursos Federais", "Grêmio", "EJA Flexivel"],
-    escolasEstaduais: ["Oscar de Moura Lacerda", "Eugenia Vilhena de Morais", "Hélio Lourenço de Oliveira", "Walter Ferreira", "Antonio Calixto", "Parque dos Servidores", "Fernando Campos Rosas"],
+    atribuicoes: ["Alocação PEI", "Formação PEI", "Acúmulo de cargos", "Estágio Probatório (docente, diretor, supervisor)"],
+    escolasEstaduais: ["Oscar de Moura Lacerda", "Eugenia Vilhena de Morais", "Hélio Lourenço de Oliveira", "Walter Ferreira"],
     escolasParticularesMunicipais: [
       "Colégio Jubileu",
       "Espaço Arte do Museu",
@@ -228,11 +229,20 @@ export const supervisores: Supervisor[] = [
       "Colégio Arkadia - Unid. I e II",
       "Marista Champagnat",
       "J Maniezo Colégio",
+    ],
+  },
+  {
+    nome: "Supervisor não atribuído",
+    semSupervisor: true,
+    atribuicoes: ["Recursos Federais", "Grêmio", "EJA Flexível"],
+    escolasEstaduais: ["Antonio Calixto", "Parque dos Servidores", "Fernando Campos Rosas"],
+    escolasParticularesMunicipais: [
       "Colégio Brasil",
       "Colégio Alvorada",
       "Escola Favinho de Mel",
       "Colégio Pinheirinho",
-      "Renovado Cristão Centro de Ensino E de Cursos Técnicos e Prof",
+      "Renovado Cristão Centro de Ensino",
+      "E de Cursos Técnicos e Prof",
       "Tecnursing",
       "Escola Técnica Paulista – (paralisação)",
     ],

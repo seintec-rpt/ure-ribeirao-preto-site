@@ -46,7 +46,14 @@ export default function SupervisorAccordion({
           aria-controls={contentId}
           onClick={onToggle}
         >
-          <span><HighlightMatch text={supervisor.nome} query={query} /></span>
+          <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <HighlightMatch text={supervisor.nome} query={query} />
+            {supervisor.semSupervisor && (
+              <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">
+                Pendente de atribuição
+              </span>
+            )}
+          </span>
           <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-50 text-xl font-normal leading-none text-blue-800" aria-hidden="true">
             {expanded ? "−" : "+"}
           </span>
