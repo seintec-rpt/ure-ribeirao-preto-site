@@ -10,6 +10,10 @@ Os dados da Supervisão de Ensino ficam separados em `src/data/supervisores.ts`,
 
 O layout é responsivo para mobile e desktop, sem rolagem horizontal. O projeto não utiliza banco de dados nem autenticação.
 
+## Canais de Comunicação
+
+A rota `/canais-de-comunicacao` está em `src/app/canais-de-comunicacao/page.tsx`. Seus dados ficam separados em `src/data/contatos.ts`, organizados por setor, seção, chefia, equipe e contatos associados. A busca e os accordions são interativos no cliente, reutilizando o componente de highlight existente e links `tel:` para os telefones.
+
 ## Produção
 
 A aplicação está publicada pela Vercel, com deploy integrado ao repositório GitHub:

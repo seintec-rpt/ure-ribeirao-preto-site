@@ -21,6 +21,12 @@ export default function Home() {
         >
           Setores da Supervisão de Ensino
         </Link>
+        <Link
+          href="/canais-de-comunicacao"
+          className="mt-3 inline-flex rounded-lg border border-blue-200 px-5 py-3 text-sm font-semibold text-blue-800 transition-colors hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800"
+        >
+          Canais de Comunicação
+        </Link>
       </section>
     </main>
   );

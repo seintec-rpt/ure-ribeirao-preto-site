@@ -29,3 +29,15 @@
 
 - Corrigida a interpretação da linha sem supervisor após Jefferson Luiz Zucchermaglio.
 - Criado o setor institucional `Supervisor não atribuído`, sem contabilizá-lo como supervisor real.
+
+## Canais de Comunicação
+
+- Iniciada a segunda funcionalidade do projeto na rota `/canais-de-comunicacao`.
+- Adicionados dados iniciais de SEAFIN, SEOM e SEINTEC em `src/data/contatos.ts`.
+- Incluídos busca, highlight, accordions acessíveis, contatos rápidos e telefones clicáveis.
+
+## Carga completa de Canais de Comunicação
+
+- Substituída a carga parcial pela base completa da planilha oficial.
+- Incluídos todos os setores, seções, equipes, contatos associados e contatos rápidos da fonte.
+- Aplicada a correção confirmada do telefone de Leticia Faria para `3519-3931`.
