@@ -8,4 +8,11 @@ Os dados da Supervisão de Ensino ficam separados em `src/data/supervisores.ts`,
 
 `src/components/supervisao` contém os componentes de busca, destaque e accordion. Os accordions são acessíveis por teclado e usam `aria-expanded`; a página também oferece os controles `Expandir todos` e `Recolher todos`.
 
-O layout é responsivo para mobile e desktop, sem rolagem horizontal. Componentes compartilhados devem ser adicionados somente quando houver necessidade real de reutilização. O projeto não utiliza banco de dados nem autenticação.
+O layout é responsivo para mobile e desktop, sem rolagem horizontal. O projeto não utiliza banco de dados nem autenticação.
+
+## Produção
+
+A aplicação está publicada pela Vercel, com deploy integrado ao repositório GitHub:
+
+- Aplicação: [https://ure-ribeirao-preto-site.vercel.app/](https://ure-ribeirao-preto-site.vercel.app/)
+- Supervisão de Ensino: [https://ure-ribeirao-preto-site.vercel.app/setores-da-supervisao-de-ensino](https://ure-ribeirao-preto-site.vercel.app/setores-da-supervisao-de-ensino)

@@ -2,27 +2,26 @@
 
 Site complementar da Unidade Regional de Ensino de Ribeirão Preto. A aplicação reúne páginas e ferramentas independentes, acessadas por links a partir do CMS institucional da Secretaria da Educação.
 
+## Produção
+
+- Aplicação: [https://ure-ribeirao-preto-site.vercel.app/](https://ure-ribeirao-preto-site.vercel.app/)
+- Supervisão de Ensino: [https://ure-ribeirao-preto-site.vercel.app/setores-da-supervisao-de-ensino](https://ure-ribeirao-preto-site.vercel.app/setores-da-supervisao-de-ensino)
+
+O projeto é publicado pela Vercel, com deploy integrado ao repositório GitHub.
+
 ## Stack
 
 - Next.js com App Router
 - TypeScript
 - Tailwind CSS
 - ESLint
-- Deploy preparado para a Vercel
 - Sem banco de dados e sem autenticação
 
 ## Funcionalidade disponível
 
-A rota `/setores-da-supervisao-de-ensino` apresenta os dados separados em `src/data/supervisores.ts`, com 30 supervisores cadastrados.
+A rota `/setores-da-supervisao-de-ensino` apresenta 30 supervisores, com dados separados em `src/data/supervisores.ts`.
 
-A página oferece:
-
-- busca por supervisor, atribuição e escola;
-- busca sem distinção entre maiúsculas/minúsculas e ignorando acentuação;
-- destaque visual do termo pesquisado;
-- accordions acessíveis por teclado;
-- controles `Expandir todos` e `Recolher todos`;
-- layout responsivo para mobile e desktop.
+A página oferece busca por supervisor, atribuição e escola, ignorando acentuação e diferenças entre maiúsculas/minúsculas, além de destaque visual do termo pesquisado, accordions acessíveis, controles `Expandir todos` e `Recolher todos`, e layout responsivo.
 
 ## Estrutura
 
@@ -53,7 +52,3 @@ Para validar uma versão de produção:
 npm run lint
 npm run build
 ```
-
-## Deploy
-
-O projeto pode ser importado diretamente na Vercel. O comando de build padrão é `npm run build`.

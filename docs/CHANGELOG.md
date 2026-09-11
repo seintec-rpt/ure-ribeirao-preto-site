@@ -18,3 +18,9 @@
 - Registrados 30 supervisores em `src/data/supervisores.ts`.
 - Mantidos os controles `Expandir todos` e `Recolher todos`, a responsividade e o destaque do termo pesquisado.
 - Página finalizada e validada com lint e build aprovados.
+
+## Primeiro deploy em produção
+
+- Primeiro deploy em produção realizado pela Vercel, com deploy integrado ao repositório GitHub.
+- URL pública da aplicação: [https://ure-ribeirao-preto-site.vercel.app/](https://ure-ribeirao-preto-site.vercel.app/)
+- URL direta da página de Supervisão: [https://ure-ribeirao-preto-site.vercel.app/setores-da-supervisao-de-ensino](https://ure-ribeirao-preto-site.vercel.app/setores-da-supervisao-de-ensino)
