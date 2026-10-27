@@ -41,3 +41,16 @@
 - Substituída a carga parcial pela base completa da planilha oficial.
 - Incluídos todos os setores, seções, equipes, contatos associados e contatos rápidos da fonte.
 - Aplicada a correção confirmada do telefone de Leticia Faria para `3519-3931`.
+
+## Área EEC
+
+- Criada a área inicial da Equipe de Especialistas em Currículo na rota `/eec`.
+- Adicionados cinco cards de áreas do conhecimento e rotas-placeholder correspondentes.
+- Estrutura registrada como protótipo, aguardando a inclusão de conteúdos pedagógicos reais.
+
+## Biblioteca de Ciências da Natureza
+
+- Criada a primeira biblioteca real da EEC em `/eec/ciencias-da-natureza`.
+- Adicionada navegação hierárquica por categoria, subcategoria e ano escolar.
+- Cadastrados cinco materiais iniciais de 7º Ano, sem URLs reais.
+- Mantidos arquivos externos ao projeto, com armazenamento local apenas de metadados e links opcionais.

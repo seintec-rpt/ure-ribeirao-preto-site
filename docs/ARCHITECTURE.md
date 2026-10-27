@@ -14,6 +14,10 @@ O layout é responsivo para mobile e desktop, sem rolagem horizontal. O projeto 
 
 A rota `/canais-de-comunicacao` está em `src/app/canais-de-comunicacao/page.tsx`. Seus dados ficam separados em `src/data/contatos.ts`, organizados por setor, seção, chefia, equipe e contatos associados. A busca e os accordions são interativos no cliente, reutilizando o componente de highlight existente e links `tel:` para os telefones.
 
+A área EEC utiliza a rota principal `/eec` e a rota dinâmica `src/app/eec/[area]/page.tsx` para os placeholders das cinco áreas do conhecimento. Os títulos, descrições, slugs e rotas ficam centralizados em `src/data/eec.ts`; conteúdos pedagógicos reais serão adicionados posteriormente.
+
+Ciências da Natureza é a primeira área real da EEC. Sua biblioteca hierárquica usa `/eec/ciencias-da-natureza`, uma rota catch-all para categorias, subcategorias e anos, e os dados em `src/data/eec.ts`. O site armazena somente metadados e links opcionais; os arquivos permanecem hospedados externamente, como no Google Drive, sem upload ou banco de dados.
+
 ## Produção
 
 A aplicação está publicada pela Vercel, com deploy integrado ao repositório GitHub:

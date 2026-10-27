@@ -27,6 +27,12 @@ export default function Home() {
         >
           Canais de Comunicação
         </Link>
+        <Link
+          href="/eec"
+          className="mt-3 inline-flex rounded-lg border border-blue-200 px-5 py-3 text-sm font-semibold text-blue-800 transition-colors hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800"
+        >
+          Equipe de Especialistas em Currículo — EEC
+        </Link>
       </section>
     </main>
   );
