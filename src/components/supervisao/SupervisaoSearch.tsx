@@ -18,8 +18,9 @@ function filterSupervisores(supervisores: Supervisor[], query: string) {
     [
       supervisor.nome,
       ...supervisor.atribuicoes,
-      ...supervisor.escolasEstaduais,
-      ...supervisor.escolasParticularesMunicipais,
+      ...supervisor.escolasEstaduais.flatMap((escola) => [escola.nome, escola.municipio, ...(escola.codigo ?? [])]),
+      ...supervisor.escolasMunicipais.flatMap((escola) => [escola.nome, escola.municipio, ...(escola.codigo ?? [])]),
+      ...supervisor.escolasParticulares.flatMap((escola) => [escola.nome, escola.municipio, ...(escola.codigo ?? [])]),
     ].some((value) => normalize(value).includes(normalizedQuery)),
   );
 }

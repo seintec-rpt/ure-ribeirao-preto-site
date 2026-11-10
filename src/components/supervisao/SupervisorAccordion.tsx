@@ -1,6 +1,6 @@
 "use client";
 
-import type { Supervisor } from "@/data/supervisores";
+import type { Escola, Supervisor } from "@/data/supervisores";
 import HighlightMatch from "./HighlightMatch";
 
 type SupervisorAccordionProps = {
@@ -10,19 +10,26 @@ type SupervisorAccordionProps = {
   onToggle: () => void;
 };
 
-function ContentBlock({ title, items, query }: { title: string; items: string[]; query: string }) {
+function ContentBlock({ title, items, query }: { title: string; items: Array<string | Escola>; query: string }) {
   if (items.length === 0) return null;
 
   return (
     <div>
       <h3 className="text-sm font-semibold text-slate-800">{title}</h3>
       <ul className="mt-2 space-y-1 text-sm leading-6 text-slate-600">
-        {items.map((item) => (
-          <li key={item} className="flex gap-2">
+        {items.map((item) => {
+          const escola = typeof item === "string" ? undefined : item;
+          const text = typeof item === "string" ? item : item.nome;
+          return (
+          <li key={typeof item === "string" ? item : `${item.nome}-${item.codigo?.join("-") ?? "sem-codigo"}`} className="flex gap-2">
             <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-700" aria-hidden="true" />
-            <span><HighlightMatch text={item} query={query} /></span>
+            <span>
+              <HighlightMatch text={text || "Nome não informado"} query={query} />
+              {escola && <span className="ml-1 text-xs text-slate-400">({escola.municipio}{escola.codigo?.length ? ` · CIE: ${escola.codigo.join(" / ")}` : ""})</span>}
+            </span>
           </li>
-        ))}
+          );
+        })}
       </ul>
     </div>
   );
@@ -60,10 +67,11 @@ export default function SupervisorAccordion({
         </button>
       </h2>
       {expanded && (
-        <div id={contentId} className="grid gap-5 border-t border-slate-100 px-5 py-5 sm:grid-cols-3">
+        <div id={contentId} className="grid gap-5 border-t border-slate-100 px-5 py-5 sm:grid-cols-2">
           <ContentBlock title="Atribuições" items={supervisor.atribuicoes} query={query} />
           <ContentBlock title="Escolas estaduais" items={supervisor.escolasEstaduais} query={query} />
-          <ContentBlock title="Escolas particulares / municipais" items={supervisor.escolasParticularesMunicipais} query={query} />
+          <ContentBlock title="Escolas municipais" items={supervisor.escolasMunicipais} query={query} />
+          <ContentBlock title="Escolas particulares" items={supervisor.escolasParticulares} query={query} />
         </div>
       )}
     </article>

@@ -1,5 +1,15 @@
 # Changelog
 
+## Atualizacao da base de Supervisao de Ensino (09/11/2026)
+
+- Atualizada `src/data/supervisores.ts` a partir da planilha `SETORES DA SUPERVISAO ATUALIZADO 9-11-26.xlsx`.
+- A aba `Base Consolidada` foi adotada como fonte oficial dos registros individuais; os 326 registros foram mantidos mesmo com divergência nos resumos.
+- Registrados 30 supervisores e 326 registros da Base Consolidada, com separacao entre redes estadual, municipal e privada.
+- Incluidos municipio e codigos das escolas quando informados na fonte.
+- A interface passou a apresentar os identificadores das escolas como `CIE`, preservando os valores e o campo interno original.
+- Atribuicoes antigas nao foram carregadas, pois nao constam na planilha nova.
+- A Base Consolidada diverge dos resumos em 5 registros: Julio Cesar de Lima (12 na base contra 10 no resumo), Rosana Morilha de Oliveira (10 contra 9) e Simone Aparecida Pimenta (9 contra 7).
+
 ## Inicial
 
 - Criação da base inicial do projeto institucional complementar.

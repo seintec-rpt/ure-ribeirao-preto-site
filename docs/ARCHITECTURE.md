@@ -4,7 +4,7 @@ O projeto utiliza Next.js com App Router e é organizado em múltiplas rotas ind
 
 As rotas e o layout global ficam em `src/app`. A rota `/setores-da-supervisao-de-ensino` está em `src/app/setores-da-supervisao-de-ensino/page.tsx`.
 
-Os dados da Supervisão de Ensino ficam separados em `src/data/supervisores.ts`, com 30 supervisores cadastrados. A busca por supervisor, atribuição e escola é executada no cliente, ignorando acentuação e diferenças entre maiúsculas/minúsculas. O termo pesquisado recebe destaque visual com `<mark>`.
+Os dados da Supervisão de Ensino ficam separados em `src/data/supervisores.ts`, com 30 supervisores cadastrados. Cada escola mantém nome, município, rede e CIE quando disponível, com listas separadas para escolas estaduais, municipais e particulares. O campo interno de código permanece preservado para refletir a fonte, mas a interface apresenta esses identificadores como CIE. A busca por supervisor, atribuição, escola, município ou CIE é executada no cliente, ignorando acentuação e diferenças entre maiúsculas/minúsculas. O termo pesquisado recebe destaque visual com `<mark>`.
 
 `src/components/supervisao` contém os componentes de busca, destaque e accordion. Os accordions são acessíveis por teclado e usam `aria-expanded`; a página também oferece os controles `Expandir todos` e `Recolher todos`.
 

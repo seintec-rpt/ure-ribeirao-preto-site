@@ -9,6 +9,7 @@
 - Accordions acessíveis e controles `Expandir todos` / `Recolher todos`.
 - Layout institucional responsivo para mobile e desktop.
 - Primeiro deploy em produção concluído e validado.
+- Base atualizada a partir da planilha de 09/11/2026, com redes separadas, municípios e CIEs preservados quando informados.
 
 ## Concluído
 
