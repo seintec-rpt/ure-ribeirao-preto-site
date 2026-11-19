@@ -18,6 +18,13 @@ A área EEC utiliza a rota principal `/eec` e a rota dinâmica `src/app/eec/[are
 
 Ciências da Natureza é a primeira área real da EEC. Sua biblioteca hierárquica usa `/eec/ciencias-da-natureza`, uma rota catch-all para categorias, subcategorias e anos, e os dados em `src/data/eec.ts`. O site armazena somente metadados e links opcionais; os arquivos permanecem hospedados externamente, como no Google Drive, sem upload ou banco de dados.
 
+## Escola SP Conecta 2027
+A rota `/escola-sp-conecta-2027` utiliza `src/app/escola-sp-conecta-2027/page.tsx` como página de apresentação e navegação. As seis subpáginas usam a rota dinâmica `src/app/escola-sp-conecta-2027/[pagina]/page.tsx`, com parâmetros definidos em `escolaSpSubpages` dentro de `src/data/escolaSpConecta.ts`.
+`EscolaSpConectaShell.tsx` concentra cabeçalho, breadcrumb, aviso, navegação entre páginas e retorno à visão geral. Os conteúdos são divididos em componentes por responsabilidade: perfil, gravação, YouTube, envio/SED, cronograma e checklist/FAQ. Todos importam os dados normativos de `src/data/escolaSpConecta.ts`; os elementos nativos `<details>` mantêm disclosures acessíveis, sem dependências adicionais ou persistência.
+A identidade visual é escopada em `.escola-sp-theme` dentro de `src/app/globals.css`, sem alterar os estilos da Supervisão, dos Canais de Comunicação ou da EEC. A rota de checklist usa `InteractiveChecklist.tsx` como único limite client-side: o estado fica em memória com `useState`, sem localStorage, cookies, API ou banco de dados. A mesma lista normativa alimenta a visualização digital e a folha de impressão; `window.print()` e regras `@media print` oferecem impressão A4 e salvamento pelo diálogo do navegador, sem dependência de biblioteca de PDF.
+### Manual de preparacao e gravacao
+`EscolaSpConectaVideoSection.tsx` permanece como Server Component e reutiliza os dados normativos da Portaria. As orientacoes praticas e os quatro tutoriais ficam tipados em `src/data/escolaSpConecta.ts`. `VideoToolSelector.tsx` e o unico limite client-side da secao: ele controla apenas a ferramenta selecionada, sem persistencia, API ou dependencia adicional. As referencias tecnicas apontam para a documentacao oficial da Microsoft e do OBS.
+`EscolaSpConectaYouTubeSection.tsx` reutiliza o requisito normativo do YouTube e separa as instrucoes tecnicas em `youtubeTutorialModes`, `youtubePrivacyOptions` e `youtubeOfficialResources`. `YouTubeTutorialSelector.tsx` controla somente o dispositivo e a etapa atualmente exibida, mantendo os dados no navegador sem receber ou armazenar links pessoais. O bloco de video tutorial permanece como placeholder sem iframe ou URL inventada.
 ## Produção
 
 A aplicação está publicada pela Vercel, com deploy integrado ao repositório GitHub:

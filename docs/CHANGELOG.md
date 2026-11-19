@@ -10,6 +10,39 @@
 - Atribuicoes antigas nao foram carregadas, pois nao constam na planilha nova.
 - A Base Consolidada diverge dos resumos em 5 registros: Julio Cesar de Lima (12 na base contra 10 no resumo), Rosana Morilha de Oliveira (10 contra 9) e Simone Aparecida Pimenta (9 contra 7).
 
+## Escola SP Conecta 2027
+- Criada a estrutura de dados normativa em `src/data/escolaSpConecta.ts` para a futura página de orientações.
+- Registrados os públicos, situações específicas, fases, requisitos do perfil, regras do vídeo, estrutura em três momentos, sete dimensões profissionais, Premissas do PEI, indicação de unidades, cronograma de nove etapas, checklist e perguntas frequentes.
+- Separadas exigências normativas de dicas práticas e associadas referências aos artigos da Portaria DIPES nº 64, de 18 de novembro de 2026.
+- Nenhuma interface, rota ou dependência foi adicionada nesta etapa.
+## Interface institucional Escola SP Conecta 2027
+- Criada a rota `/escola-sp-conecta-2027` com metadata específica e conteúdo institucional responsivo.
+- Adicionado o componente `EscolaSpConectaGuide.tsx`, reutilizando integralmente os dados normativos da Etapa 1.
+- Incluídas navegação por âncoras, disclosures acessíveis, fases, perfil profissional, vídeo, dimensões, PEI, publicação no YouTube, cronograma, checklist expositivo e perguntas frequentes.
+- Adicionado link de acesso na página inicial.
+- Aplicada identidade visual escopada, sem alterar as páginas existentes.
+- Mantidos para etapa posterior a marcação interativa do checklist, o contador de progresso, o FAQ avançado e o tutorial visual.
+## Reorganização em subpáginas Escola SP Conecta 2027
+- Transformada a rota principal em página de apresentação e navegação com seis cards.
+- Criada rota dinâmica para `/perfil`, `/gravar-video`, `/publicar-youtube`, `/envio-sed`, `/cronograma` e `/checklist`.
+- Criado shell compartilhado com breadcrumb, navegação entre orientações e retorno à página principal.
+- Dividido o conteúdo em componentes por responsabilidade, preservando os dados normativos centralizados.
+- Mantidos como conteúdo futuro os tutoriais técnicos, a marcação interativa, o progresso e o PDF para impressão.
+## Checklist interativo Escola SP Conecta 2027
+- Criado `InteractiveChecklist.tsx` como limite client-side da rota `/escola-sp-conecta-2027/checklist`, com os 14 itens normativos mantidos em `src/data/escolaSpConecta.ts`.
+- Adicionados marcação acessível, contador, barra de progresso, limpeza dos itens e aviso de que a ferramenta não substitui o registro ou a confirmação na SED.
+- Adicionada folha A4 para impressão e salvamento em PDF pelo diálogo nativo do navegador, com caixas vazias, alto contraste e controles ocultos na impressão.
+- Mantido como evolução futura o fornecimento de um arquivo PDF estático para download.
+## Manual de preparacao e gravacao Escola SP Conecta 2027
+- Ampliada a subpagina `/escola-sp-conecta-2027/gravar-video` com requisitos da Portaria, roteiro em tres momentos, dimensoes profissionais, Premissas do PEI e conferencia do arquivo.
+- Adicionadas dicas praticas de ambiente e equipamento, separadas das exigencias normativas.
+- Criado seletor acessivel para celular, Camera do Windows, OBS Studio e Microsoft Teams, com etapas, requisitos, erros comuns e referencias oficiais.
+- Incluido link de continuidade para a publicacao no YouTube, sem duplicar o tutorial dessa subpagina.
+## Manual de publicacao no YouTube Escola SP Conecta 2027
+- Substituido o placeholder da subpagina `/escola-sp-conecta-2027/publicar-youtube` por tutorial orientativo com etapas tipadas para computador e celular.
+- Adicionadas comparacao entre visibilidades, destaque normativo para `Nao listado`, teste do link e encaminhamento para a pagina de envio na SED.
+- Incluidas referencias oficiais para Conta Google, criacao de canal, YouTube Studio, envio de videos e privacidade.
+- Mantido o espaco reservado para futuro video institucional da URE sem iframe ou URL inventada.
 ## Inicial
 
 - Criação da base inicial do projeto institucional complementar.
