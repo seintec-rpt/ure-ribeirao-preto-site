@@ -107,12 +107,12 @@ body {
 .escola-sp-subtitle { color: var(--escola-sp-blue); font-size: clamp(1.2rem, 2.5vw, 1.65rem); font-weight: 800; margin-top: 1.25rem; }
 .escola-sp-lead { color: var(--escola-sp-muted); font-size: 1.05rem; line-height: 1.8; margin-top: 1rem; max-width: 44rem; }
 .escola-sp-hero-meta { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
-.escola-sp-hero-meta span, .escola-sp-status, .escola-sp-count { background: rgb(3 78 162 / 8%); border: 1px solid rgb(3 78 162 / 16%); border-radius: 999px; color: var(--escola-sp-blue); font-size: 0.75rem; font-weight: 800; padding: 0.42rem 0.7rem; }
+.escola-sp-hero-meta span, .escola-sp-count { background: rgb(3 78 162 / 8%); border: 1px solid rgb(3 78 162 / 16%); border-radius: 999px; color: var(--escola-sp-blue); font-size: 0.75rem; font-weight: 800; padding: 0.42rem 0.7rem; }
 .escola-sp-hero-mark { align-items: center; background: var(--escola-sp-blue); border-radius: 1.15rem; color: white; display: flex; flex-direction: column; justify-content: center; min-height: 13rem; padding: 1.5rem; position: relative; text-align: center; }
 .escola-sp-hero-mark::after { border: 1px solid rgb(255 255 255 / 32%); border-radius: 50%; content: ""; height: 12rem; position: absolute; width: 12rem; }
 .escola-sp-hero-mark span { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; z-index: 1; }
 .escola-sp-hero-mark strong { color: var(--escola-sp-yellow); font-size: 4.5rem; letter-spacing: -0.08em; line-height: 0.9; z-index: 1; }
-.escola-sp-notice, .escola-sp-quick-nav, .escola-sp-panel, .escola-sp-tutorial-placeholder, .escola-sp-callout { background: var(--escola-sp-surface); border: 1px solid #dce5f0; border-radius: 1rem; }
+.escola-sp-notice, .escola-sp-quick-nav, .escola-sp-panel, .escola-sp-callout { background: var(--escola-sp-surface); border: 1px solid #dce5f0; border-radius: 1rem; }
 .escola-sp-notice { align-items: flex-start; display: flex; gap: 0.8rem; margin-top: 1rem; padding: 1rem 1.1rem; }
 .escola-sp-notice p { color: var(--escola-sp-muted); font-size: 0.9rem; line-height: 1.6; }
 .escola-sp-notice-icon { align-items: center; background: #e7f0fc; border-radius: 50%; color: var(--escola-sp-blue); display: inline-flex; flex: 0 0 auto; font-weight: 900; height: 1.5rem; justify-content: center; width: 1.5rem; }
@@ -144,7 +144,7 @@ body {
 .escola-sp-card-grid-five { grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); }
 .escola-sp-card, .escola-sp-numbered-card, .escola-sp-rule { background: var(--escola-sp-surface); border: 1px solid #dce5f0; border-radius: 1rem; padding: 1.2rem; }
 .escola-sp-card { border-top: 3px solid var(--escola-sp-blue); }
-.escola-sp-card h3, .escola-sp-numbered-card h3, .escola-sp-rule h3, .escola-sp-panel h3, .escola-sp-tutorial-placeholder h3 { color: var(--escola-sp-navy); font-size: 1.05rem; font-weight: 800; line-height: 1.35; margin-top: 0.55rem; }
+.escola-sp-card h3, .escola-sp-numbered-card h3, .escola-sp-rule h3, .escola-sp-panel h3 { color: var(--escola-sp-navy); font-size: 1.05rem; font-weight: 800; line-height: 1.35; margin-top: 0.55rem; }
 .escola-sp-card p, .escola-sp-numbered-card p, .escola-sp-rule p, .escola-sp-panel > p { color: var(--escola-sp-muted); font-size: 0.9rem; line-height: 1.7; margin-top: 0.65rem; }
 .escola-sp-card-kicker { color: var(--escola-sp-green); font-size: 0.68rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
 .escola-sp-numbered-card { min-height: 12rem; }
@@ -191,10 +191,6 @@ body {
 .escola-sp-premises-list li { align-items: center; display: flex; gap: 0.7rem; }
 .escola-sp-premises-list li span:nth-child(2) { font-weight: 800; }
 .escola-sp-premises-list .escola-sp-reference { margin-left: auto; }
-.escola-sp-tutorial-placeholder { align-items: center; display: flex; gap: 1rem; margin-top: 2rem; padding: 1.3rem; }
-.escola-sp-play-placeholder { align-items: center; background: #e7f0fc; border-radius: 0.8rem; color: var(--escola-sp-blue); display: flex; flex: 0 0 auto; font-size: 1.2rem; height: 4rem; justify-content: center; width: 4rem; }
-.escola-sp-tutorial-placeholder p { color: var(--escola-sp-muted); font-size: 0.9rem; line-height: 1.65; margin-top: 0.35rem; }
-.escola-sp-status { display: inline-block; margin-top: 0.65rem; }
 .escola-sp-rules-list { display: grid; gap: 0.75rem; margin-top: 2rem; }
 .escola-sp-rule { align-items: flex-start; display: flex; gap: 0.8rem; }
 .escola-sp-timeline { display: grid; gap: 0; margin-top: 2rem; }
