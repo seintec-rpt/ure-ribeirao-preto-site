@@ -1,5 +1,15 @@
 # Changelog
 
+## Atualizacao da base de Supervisao de Ensino (23/11/2026)
+
+- Atualizada `src/data/supervisores.ts` com a planilha `SETORES DA SUPERVISAO ATUALIZADO 9-11-26(1).xlsx`.
+- Adicionados 31 supervisores e 340 registros da aba `Base Consolidada`: 105 estaduais, 49 municipais e 186 particulares.
+- Mantidos separadamente `Código da Escola` como CIE e `Código da Unidade`; valores vazios não foram preenchidos.
+- A nova base possui 15 municípios e não contém atribuições/responsabilidades para serem inventadas ou reaproveitadas.
+- Os resumos da planilha totalizam 321 registros e listam 30 supervisores, divergindo em 19 registros da Base Consolidada; Camila Aparecida Veloso Perini aparece na Base Consolidada, mas não no resumo por supervisor.
+- As divergências por supervisor estão concentradas em Ana Paula (-1), Flavia (-1), Isabel (+1 na distribuição entre redes), Julio (-2), Rosana (-1) e Simone (-2) no resumo em relação à Base Consolidada.
+- A Base Consolidada possui 15 municípios, enquanto o resumo possui 13; `SANTO ANTONIO DA ALEGRIA` e `SERRA AZUL` aparecem somente na Base Consolidada, além de haver diferenças de contagem por município.
+
 ## Atualizacao da base de Supervisao de Ensino (09/11/2026)
 
 - Atualizada `src/data/supervisores.ts` a partir da planilha `SETORES DA SUPERVISAO ATUALIZADO 9-11-26.xlsx`.

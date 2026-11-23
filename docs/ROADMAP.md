@@ -3,13 +3,14 @@
 ## Concluído
 
 - Página Setores da Supervisão de Ensino na rota `/setores-da-supervisao-de-ensino`, publicada em produção na Vercel.
-- Base completa da Supervisão de Ensino com 30 supervisores em `src/data/supervisores.ts`.
+- Base completa da Supervisão de Ensino com 31 supervisores em `src/data/supervisores.ts`.
 - Busca por supervisor, atribuição e escola, ignorando acentuação e maiúsculas/minúsculas.
 - Destaque visual do termo pesquisado.
 - Accordions acessíveis e controles `Expandir todos` / `Recolher todos`.
 - Layout institucional responsivo para mobile e desktop.
 - Primeiro deploy em produção concluído e validado.
 - Base atualizada a partir da planilha de 09/11/2026, com redes separadas, municípios e CIEs preservados quando informados.
+- Base revisada a partir da nova aba `Base Consolidada`, com 340 registros, CIE e Código da Unidade mantidos separadamente.
 
 ## Concluído
 

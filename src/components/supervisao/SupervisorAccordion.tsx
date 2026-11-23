@@ -21,11 +21,11 @@ function ContentBlock({ title, items, query }: { title: string; items: Array<str
           const escola = typeof item === "string" ? undefined : item;
           const text = typeof item === "string" ? item : item.nome;
           return (
-          <li key={typeof item === "string" ? item : `${item.nome}-${item.codigo?.join("-") ?? "sem-codigo"}`} className="flex gap-2">
+          <li key={typeof item === "string" ? item : `${item.nome}-${item.codigoEscola ?? "sem-cie"}-${item.codigoUnidade ?? "sem-unidade"}`} className="flex gap-2">
             <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-700" aria-hidden="true" />
             <span>
               <HighlightMatch text={text || "Nome não informado"} query={query} />
-              {escola && <span className="ml-1 text-xs text-slate-400">({escola.municipio}{escola.codigo?.length ? ` · CIE: ${escola.codigo.join(" / ")}` : ""})</span>}
+              {escola && <span className="ml-1 text-xs text-slate-400">({escola.municipio}{escola.codigoEscola ? ` · CIE: ${escola.codigoEscola}` : ""}{escola.codigoUnidade ? ` · unidade: ${escola.codigoUnidade}` : ""})</span>}
             </span>
           </li>
           );

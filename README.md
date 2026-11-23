@@ -19,7 +19,7 @@ O projeto é publicado pela Vercel, com deploy integrado ao repositório GitHub.
 
 ## Funcionalidade disponível
 
-A rota `/setores-da-supervisao-de-ensino` apresenta 30 supervisores, com dados separados em `src/data/supervisores.ts`. As escolas incluem município, rede e CIE quando informado pela fonte oficial.
+A rota `/setores-da-supervisao-de-ensino` apresenta 31 supervisores, com dados separados em `src/data/supervisores.ts`. As escolas incluem município, rede, CIE e código da unidade quando informados pela fonte oficial.
 
 A página oferece busca por supervisor, atribuição, escola, município e CIE, ignorando acentuação e diferenças entre maiúsculas/minúsculas, além de destaque visual do termo pesquisado, accordions acessíveis, controles `Expandir todos` e `Recolher todos`, e layout responsivo.
 
